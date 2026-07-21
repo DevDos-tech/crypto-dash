@@ -4,6 +4,7 @@ import HomePage from './pages/home';
 import { Route, Routes } from 'react-router';
 import AboutPage from './pages/about';
 import Header from './pages/header';
+import NotFound from './pages/not-found';
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -55,6 +56,7 @@ function App() {
           }
         />
         <Route path='/about' element={<AboutPage />} />
+        <Route path='*' element={<NotFound/>} />
       </Routes>
     </>
 

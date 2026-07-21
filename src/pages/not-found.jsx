@@ -2,7 +2,7 @@ import { Link } from "react-router"
 
 const styles = {
     container:{
-        texAlign: 'center',
+        textAlign: 'center',
         padding:'80px 20px',
         color:'#fff'
     },
@@ -12,7 +12,13 @@ const styles = {
         marginBottom: '20px'
     },
     message:{
-        fontSize:'18px'
+        fontSize:'18px',
+        marginBottom: '30px'
+    },
+    link:{
+        textDecoration:'none',
+        color:'#007bff',
+        fontWeight:'bold'
     }
 }
 
@@ -21,8 +27,9 @@ const NotFound = () => {
     <div style={styles.container}>
         <h1 style={styles.title}>404</h1>
         <p style={styles.message}>
-            ops! A página que voc~e está procurando não existe
-        </p>      
+            Ops! A página que você está procurando não existe.
+        </p>
+        <Link style={styles.link} to={'/'}> 🡐 voltar para home</Link>      
     </div>
   )
 }
