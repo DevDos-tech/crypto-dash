@@ -29,7 +29,7 @@ const NotFound = () => {
         <p style={styles.message}>
             Ops! A página que você está procurando não existe.
         </p>
-        <Link style={styles.link} to={'/'}> 🡐 voltar para home</Link>      
+        <Link style={styles.link} to={'/'}> 🡐 voltar para a Home</Link>      
     </div>
   )
 }

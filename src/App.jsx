@@ -5,6 +5,7 @@ import { Route, Routes } from 'react-router';
 import AboutPage from './pages/about';
 import Header from './pages/header';
 import NotFound from './pages/not-found';
+import CoinDetailsPage from './pages/coin-details';
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -55,6 +56,7 @@ function App() {
             />
           }
         />
+        <Route path='/coin/:id' element={<CoinDetailsPage />} />
         <Route path='/about' element={<AboutPage />} />
         <Route path='*' element={<NotFound/>} />
       </Routes>
