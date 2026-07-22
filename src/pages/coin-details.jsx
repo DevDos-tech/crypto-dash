@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router'
 import Spinner from '../components/Spinner';
+import CoinChart from '../components/CoinChart';
 
 const CoinDetailsPage = () => {
     const { id } = useParams();
@@ -93,15 +94,13 @@ const CoinDetailsPage = () => {
                         <p>Categories: {coin.categories.join(', ')}</p>
                     )}
 
+                    <CoinChart coinId={coin.id}/>
                 </>
             )}
 
-             {!loading && !error && coin && <p>Nenhum dado encontrado</p>}
+            {!loading && !error && coin && <p>Nenhum dado encontrado</p>}
 
         </div>
-
-
-
     )
 }
 
