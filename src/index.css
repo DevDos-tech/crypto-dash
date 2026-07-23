@@ -1,3 +1,9 @@
+:root {
+  --text-secondary: #9aa3af;
+  --font-mono: "Segoe UI", monospace;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -8,7 +14,6 @@ body {
   background-color: #0e1117;
   color: #f0f0f0;
   line-height: 1.6;
-  padding: 2rem;
 }
 
 h1 {
@@ -23,9 +28,11 @@ a {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(5, minmax(230px, 1fr));
   gap: 16px;
-  border: solid 1px #f44336;
+  border: solid 1px;
+  padding: 16px;
+  
 }
 
 .symbol {
@@ -50,10 +57,49 @@ a {
   justify-content: space-between;
 }
 
+/* Coin Card */
 .coin-card {
-  border: solid 1px #f44336;
+  background-color: #2d323d;
+  border: 1px solid #3a3f4b;
+  border-radius: 10px; 
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  height: 150px;
+  padding: 10px;
 }
 
+.coin-card:hover,
+.coin-card:focus-visible {
+  transform: translateY(-4px);
+  outline: none;
+}
+
+.coin-header{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* glow verde quando a moeda está em alta */
+.coin-card.trend-up:hover,
+.coin-card.trend-up:focus-visible {
+  border-color: #4caf50;
+  box-shadow: 0 12px 24px -8px rgba(76, 175, 80, 0.35);
+}
+
+/* glow vermelho quando está em baixa */
+.coin-card.trend-down:hover,
+.coin-card.trend-down:focus-visible {
+  border-color: #f44336;
+  box-shadow: 0 12px 24px -8px rgba(244, 67, 54, 0.35);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .coin-card { transition: none; }
+}
+.coin-card img{
+  width: 50px;
+  height: 50px;
+}
 /* Navigation */
 
 .top-nav{
