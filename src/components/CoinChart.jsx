@@ -25,13 +25,7 @@ ChartJS.register(
 
 
 const CoinChart = ({ coinId }) => {
-    const [chartData, SetChartData] = useState({
-        datasets: [
-            {
-                data: [],              
-            }
-        ]
-    });
+    const [chartData, SetChartData] = useState({ datasets: [] });
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
@@ -40,6 +34,7 @@ const CoinChart = ({ coinId }) => {
                 const res = await fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=brl&days=7`)
                 if (!res.ok) throw new Error('Failed to fetch coin data');
                 const data = await res.json();
+                console.log(data.prices)
 
                 const prices = data.prices.map((price) => ({
                     x: price[0],
@@ -47,6 +42,8 @@ const CoinChart = ({ coinId }) => {
                 }));
 
                 SetChartData({
+                    datasets: [
+                    {
                     label: 'prce(BRL)',
                     data: prices,
                     fill: true,
@@ -54,8 +51,9 @@ const CoinChart = ({ coinId }) => {
                     backgroundColor: 'rgba(0,123,255,0.1)',
                     pointRadius: 0,
                     tension: 0.3
-                });
+                }]});
             } catch (error) {
+                console.log("passou aqui")
                 console.log(error)
             } finally {
                 setLoading(false);
