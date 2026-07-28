@@ -1,6 +1,6 @@
 const SortSelector = ({sortBy, onSortChange}) => {
   return (
-    <div className="controls">
+    <div className="limit-controls">
         <label htmlFor="sort">Sort by:</label>
         <select id="limit" value={sortBy} onChange={(e) => onSortChange(e.target.value)} >
                 <option value="market_cap_desc">Market Cap</option>

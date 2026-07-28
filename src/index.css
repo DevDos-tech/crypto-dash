@@ -3,6 +3,10 @@
   --font-mono: "Segoe UI", monospace;
 }
 
+::placeholder{
+  color: #fff;
+  opacity: 1;
+}
 
 * {
   margin: 0;
@@ -30,7 +34,6 @@ a {
   display: grid;
   grid-template-columns: repeat(5, minmax(230px, 1fr));
   gap: 16px;
-  border: solid 1px;
   padding: 16px;
   
 }
@@ -50,12 +53,44 @@ a {
   color: #f44336;
 }
 
-/* Top Control*/
-
-.top-control {
+/* Top Controls , Filter , Sorty By*/
+.top-controls {
   display: flex;
-  justify-content: space-between;
+  margin-left: 16px;
+  gap: 16px;  
 }
+
+.filter input{
+  color: #fff;
+  border: solid 1px #3a3f4b;
+  border-radius: 15px;
+  background: #3a3f4b;  
+  padding-left: 10px;
+  width: 825px;
+  height: 25px;  
+  
+}
+
+.limit-controls select{
+  color: #fff;
+  border: solid 1px #3a3f4b;
+  border-radius: 15px;
+  height: 25px;
+  font-size: 14px;
+  text-align: center;
+  background: #3a3f4b;  
+}
+
+.limit-controls label{
+ padding-left: 5px;
+ margin: 5px;
+}
+
+.limit-controls select option {
+ padding-left: 12px;
+ text-indent: 8px;
+}
+
 
 /* Coin Card */
 .coin-card {
@@ -100,8 +135,5 @@ a {
   width: 50px;
   height: 50px;
 }
-/* Navigation */
 
-.top-nav{
-  
-}
+/* Navigation */

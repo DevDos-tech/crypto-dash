@@ -11,7 +11,7 @@ function App() {
   const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [limit, setLimit] = useState(5);
+  const [limit, setLimit] = useState(10);
   const [filter, setFilter] = useState('');
   const [sortBy, setSortBy] = useState('market_cap_desc');
 
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <Header/>
+      <Header />
       <Routes>
         <Route
           path='/'
