@@ -3,7 +3,7 @@
   --font-mono: "Segoe UI", monospace;
 }
 
-::placeholder{
+::placeholder {
   color: #fff;
   opacity: 1;
 }
@@ -14,7 +14,7 @@
 }
 
 body {
-  font-family: "Segoe UI" Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Roboto, Arial, sans-serif, Inter, Segoe UI, Helvetica Neue, Noto Sans;
   background-color: #0e1117;
   color: #f0f0f0;
   line-height: 1.6;
@@ -25,9 +25,10 @@ h1 {
   font-size: 2rem;
 }
 
-a {
+a:hover {
   color: #fff;
   text-decoration: none;
+  
 }
 
 .grid {
@@ -35,7 +36,7 @@ a {
   grid-template-columns: repeat(5, minmax(230px, 1fr));
   gap: 16px;
   padding: 16px;
-  
+
 }
 
 .symbol {
@@ -46,7 +47,6 @@ a {
 
 .positive {
   color: #4caf50;
-
 }
 
 .negative {
@@ -57,38 +57,38 @@ a {
 .top-controls {
   display: flex;
   margin-left: 16px;
-  gap: 16px;  
+  gap: 16px;
 }
 
-.filter input{
+.filter input {
   color: #fff;
   border: solid 1px #3a3f4b;
   border-radius: 15px;
-  background: #3a3f4b;  
+  background: #3a3f4b;
   padding-left: 10px;
   width: 825px;
-  height: 25px;  
-  
+  height: 25px;
+
 }
 
-.limit-controls select{
+.limit-controls select {
   color: #fff;
   border: solid 1px #3a3f4b;
   border-radius: 15px;
   height: 25px;
   font-size: 14px;
   text-align: center;
-  background: #3a3f4b;  
+  background: #3a3f4b;
 }
 
-.limit-controls label{
- padding-left: 5px;
- margin: 5px;
+.limit-controls label {
+  padding-left: 5px;
+  margin: 5px;
 }
 
 .limit-controls select option {
- padding-left: 12px;
- text-indent: 8px;
+  padding-left: 12px;
+  text-indent: 8px;
 }
 
 
@@ -96,7 +96,7 @@ a {
 .coin-card {
   background-color: #2d323d;
   border: 1px solid #3a3f4b;
-  border-radius: 10px; 
+  border-radius: 10px;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   height: 150px;
   padding: 10px;
@@ -108,7 +108,7 @@ a {
   outline: none;
 }
 
-.coin-header{
+.coin-header {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -129,11 +129,34 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .coin-card { transition: none; }
+  .coin-card {
+    transition: none;
+  }
 }
-.coin-card img{
+
+.coin-card img {
   width: 50px;
   height: 50px;
 }
 
 /* Navigation */
+
+/*Coin chart details*/
+.coin-details-container {
+  color: #0e1117;
+  border: solid 1px #ddd;
+  border-radius: 15px;
+  background: #ddd;
+  width: 500px;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Roboto, Arial, sans-serif, Inter, Segoe UI, Helvetica Neue, Noto Sans;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.coin-details-container img {
+  width: 100px;
+}
+
+.coin-details-info {}

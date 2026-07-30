@@ -34,7 +34,7 @@ const CoinDetailsPage = () => {
                 {coin ? `${coin.name} (${coin.symbol.toUpperCase()})` : 'Detalhes da Moeda'}
             </h1>
 
-            {loading && <Spinner/>}
+            {loading && <Spinner />}
             {error && <p className='error'>{error}</p>}
 
             {!loading && !error && coin && (
@@ -90,16 +90,15 @@ const CoinDetailsPage = () => {
                         </p>
                     )}
 
-                    {coin.categories.length >0 && (
+                    {coin.categories.length > 0 && (
                         <p>Categories: {coin.categories.join(', ')}</p>
                     )}
 
-                    <CoinChart coinId={coin.id}/>
+                    <CoinChart coinId={coin.id} />
                 </>
             )}
 
-            {!loading && !error && coin && <p>Nenhum dado encontrado</p>}
-
+            {!loading && !error && !coin && <p>Nenhum dado encontrado</p>}
         </div>
     )
 }

@@ -68,7 +68,7 @@ const CoinChart = ({ coinId }) => {
 
 
     return (
-        <div style={{ marginTop: '30px' }}>
+        <div style={{ margin: '5px auto', width:'500px'}}>
             <Line
                 data={chartData}
                 options={{
