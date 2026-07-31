@@ -44,7 +44,6 @@ const HomePage = ({
     return (
 
         <div>
-            <h1>Crypto Dash</h1>
             <div className='top-controls'>
                 <FilterInput filter={filter} onFilterChange={setFilter} />
                 <LimitSelector Limit={limit} onLimitChange={setLimit} />

@@ -25,7 +25,7 @@ h1 {
   font-size: 2rem;
 }
 
-a:hover {
+a{
   color: #fff;
   text-decoration: none;
   
@@ -56,8 +56,9 @@ a:hover {
 /* Top Controls , Filter , Sorty By*/
 .top-controls {
   display: flex;
-  margin-left: 16px;
+  margin: 20px 0 0 16px;
   gap: 16px;
+
 }
 
 .filter input {
@@ -140,6 +141,47 @@ a:hover {
 }
 
 /* Navigation */
+.top-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  height: 50px;
+}
+
+.nav-links{
+  display: flex;
+  gap: 1.5rem;
+  
+}
+
+.nav-links a{
+  text-decoration: none;
+  color: #f3e0e0;
+  font-weight: 500;
+  padding-bottom: 1px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;  
+}
+
+.nav-links a:hover {  
+  border-bottom: 2px solid #6c5ce7;
+}
+
+/* Logo */
+
+.logo{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.25rem;  
+}
+
+.logo img{
+  height: 32px;
+}
 
 /*Coin chart details*/
 .coin-details-container {
@@ -158,5 +200,7 @@ a:hover {
 .coin-details-container img {
   width: 100px;
 }
+
+
 
 .coin-details-info {}
