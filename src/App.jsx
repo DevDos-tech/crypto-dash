@@ -6,6 +6,7 @@ import AboutPage from './pages/about';
 import Header from './pages/header';
 import NotFound from './pages/not-found';
 import CoinDetailsPage from './pages/coin-details';
+import { ThemeProvider } from './context/ThemeContext'
 
 function App() {
   const [coins, setCoins] = useState([]);
@@ -38,28 +39,30 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Routes>
-        <Route
-          path='/'
-          element={
-            <HomePage
-              coins={coins}
-              filter={filter}
-              setFilter={setFilter}
-              limit={limit}
-              setLimit={setLimit}
-              sortBy={sortBy}
-              setSortBy={setSortBy}
-              loading={loading}
-              error={error}
-            />
-          }
-        />
-        <Route path='/coin/:id' element={<CoinDetailsPage />} />
-        <Route path='/about' element={<AboutPage />} />
-        <Route path='*' element={<NotFound/>} />
-      </Routes>
+      <ThemeProvider>
+        <Header />
+        <Routes>
+          <Route
+            path='/'
+            element={
+              <HomePage
+                coins={coins}
+                filter={filter}
+                setFilter={setFilter}
+                limit={limit}
+                setLimit={setLimit}
+                sortBy={sortBy}
+                setSortBy={setSortBy}
+                loading={loading}
+                error={error}
+              />
+            }
+          />
+          <Route path='/coin/:id' element={<CoinDetailsPage />} />
+          <Route path='/about' element={<AboutPage />} />
+          <Route path='*' element={<NotFound />} />
+        </Routes>
+      </ThemeProvider>
     </>
 
   )
